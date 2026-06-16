@@ -1,0 +1,7 @@
+# Example Document — Product Refund Policy
+
+Customers may request a full refund within 30 days of purchase.
+To initiate a refund, contact support@example.com with your order number.
+Refunds are processed within 5-7 business days to the original payment method.
+Products must be returned in their original condition to qualify for a refund.
+Digital products are non-refundable once downloaded.

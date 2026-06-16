@@ -1,0 +1,34 @@
+# Models and adapters
+models/
+experts/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# uv / venv
+.venv/
+.cache/
+
+# Testing
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Large binary model files
+*.gguf
+*.bin
+*.safetensors
