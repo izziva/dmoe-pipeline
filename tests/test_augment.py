@@ -6,7 +6,6 @@ Ollama is NOT required — all external calls are mocked.
 from __future__ import annotations
 
 from pathlib import Path
-from unittest.mock import patch
 
 from dmoe.augment import (
     build_training_records,
@@ -49,7 +48,12 @@ def test_build_training_records_structure() -> None:
 
 def test_write_split_creates_files(tmp_path: Path) -> None:
     records = [
-        {"messages": [{"role": "user", "content": f"Q{i}"}, {"role": "assistant", "content": f"A{i}"}]}
+        {
+            "messages": [
+                {"role": "user", "content": f"Q{i}"},
+                {"role": "assistant", "content": f"A{i}"},
+            ]
+        }
         for i in range(5)
     ]
     write_split(records, tmp_path)
