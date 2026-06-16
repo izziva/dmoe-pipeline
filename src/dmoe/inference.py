@@ -31,8 +31,8 @@ def compute_shannon_entropy(logits: list[float]) -> float:
     Used as Token Uncertainty (TU) metric. If TU > tau, the router
     is triggered to inject parametric knowledge.
     """
-    max_l = max(logits)
-    exp_l = [math.exp(l - max_l) for l in logits]
+    max_logit = max(logits)
+    exp_l = [math.exp(logit_val - max_logit) for logit_val in logits]
     total = sum(exp_l)
     probs = [e / total for e in exp_l]
     return -sum(p * math.log(p + 1e-9) for p in probs if p > 0)
